@@ -1,0 +1,45 @@
+16:19:59 **** Incremental Build of configuration Debug for project Lab04 ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+Building file: ../src/main.c
+/home/shay/a/tejada/Documents/ECE362/Lab04/Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+/home/shay/a/tejada/Documents/ECE362/Lab04/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/lab04.s
+ 
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04/src/autotest.o  -lm
+Finished building target: Lab04.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04.elf" "Lab04.bin"
+arm-none-eabi-size "Lab04.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1416	   1080	    204	   2700	    a8c	Lab04.elf
+ 
+
+16:20:00 Build Finished (took 715ms)
+

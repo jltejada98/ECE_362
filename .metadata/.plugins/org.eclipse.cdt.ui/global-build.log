@@ -1,0 +1,921 @@
+16:53:01 **** Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:53:03 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:53:15 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:53:20 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:54:02 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:54:54 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:58:08 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1592	   1080	    204	   2876	    b3c	Lab04_tejada.elf
+ 
+16:58:24 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+16:58:43 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:01:29 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:04:18 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:06:12 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+src/lab04.o: In function `EXTI0_1_IRQHandler':
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug/../src/lab04.s:190: undefined reference to `micro_wait'
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'Lab04_tejada.elf' failed
+make: *** [Lab04_tejada.elf] Error 1
+17:06:29 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+../src/lab04.s: Assembler messages:
+../src/lab04.s:190: Error: unrecognized relocation suffix -- `bl micro_wait()'
+src/subdir.mk:33: recipe for target 'src/lab04.o' failed
+make: *** [src/lab04.o] Error 1
+17:06:37 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:07:00 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:07:11 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:09:03 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+Building file: ../src/main.c
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/lab04.s
+ 
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:09:24 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/lab04.s
+ 
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:09:38 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:14:39 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/lab04.s
+ 
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:15:09 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:16:37 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:16:49 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:17:02 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:17:03 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:17:14 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:17:50 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+17:18:09 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:18:21 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:18:35 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:18:43 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:19:42 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:19:50 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:19:58 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:20:06 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:20:51 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Building file: ../src/main.c
+Invoking: MCU GCC Assembler
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/lab04.s
+ 
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1416	   1080	    204	   2700	    a8c	Lab04_tejada.elf
+ 
+17:21:23 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1588	   1080	    204	   2872	    b38	Lab04_tejada.elf
+ 
+17:21:54 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+Building file: ../src/main.c
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Invoking: MCU GCC Compiler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/lab04.s
+ 
+../src/main.c: In function 'reaction_timer':
+../src/main.c:34:3: warning: implicit declaration of function 'turnOnBlueLED' [-Wimplicit-function-declaration]
+   turnOnBlueLED();
+   ^~~~~~~~~~~~~
+../src/main.c:35:3: warning: implicit declaration of function 'init_rtsr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_rtsr();
+   ^~~~~~~~~
+   init_systick
+../src/main.c:36:3: warning: implicit declaration of function 'init_imr'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_imr();
+   ^~~~~~~~
+   init_systick
+../src/main.c:37:3: warning: implicit declaration of function 'init_iser'; did you mean 'init_systick'? [-Wimplicit-function-declaration]
+   init_iser();
+   ^~~~~~~~~
+   init_systick
+Finished building: ../src/main.c
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1564	   1080	    204	   2848	    b20	Lab04_tejada.elf
+ 
+17:23:05 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1560	   1080	    204	   2844	    b1c	Lab04_tejada.elf
+ 
+17:24:32 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+../src/lab04.s: Assembler messages:
+../src/lab04.s:207: Error: ']' expected -- `str R1,[R0,#RTSRLDR R1,[R1]]'
+src/subdir.mk:33: recipe for target 'src/lab04.o' failed
+make: *** [src/lab04.o] Error 1
+17:25:38 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j8 all 
+Building file: ../src/lab04.s
+Invoking: MCU GCC Assembler
+/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
+Finished building: ../src/lab04.s
+ 
+Building target: Lab04_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
+Finished building target: Lab04_tejada.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
+arm-none-eabi-size "Lab04_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1560	   1080	    204	   2844	    b1c	Lab04_tejada.elf
+ 
