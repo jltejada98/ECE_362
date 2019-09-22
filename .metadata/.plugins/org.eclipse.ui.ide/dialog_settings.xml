@@ -8,6 +8,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada"/>
+			<item value="/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362"/>
 			<item value="/home/shay/a/tejada/Documents/ECE362/Lab04_tejada"/>
 			<item value="/home/shay/a/tejada/Documents/ECE362/Lab03"/>
 			<item value="/home/shay/a/tejada/Documents/ECE362/Lab04"/>
@@ -15,6 +17,10 @@
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="BasicNewProjectResourceWizard">
 	</section>
 	<section name="SaveAsDialogSettings">
 		<item value="525" key="DIALOG_WIDTH"/>

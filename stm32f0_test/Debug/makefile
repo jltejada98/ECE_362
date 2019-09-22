@@ -32,10 +32,10 @@ endif
 all: stm32f0_test.elf
 
 # Tool invocations
-stm32f0_test.elf: $(OBJS) $(USER_OBJS) /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/Labs/stm32f0_test/LinkerScript.ld
+stm32f0_test.elf: $(OBJS) $(USER_OBJS) /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/ECE362/stm32f0_test/LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/stm32f0_test/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32f0_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/stm32f0_test/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32f0_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

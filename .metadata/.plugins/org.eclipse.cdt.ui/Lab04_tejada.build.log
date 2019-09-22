@@ -1,23 +1,6 @@
-17:25:38 **** Incremental Build of configuration Debug for project Lab04_tejada ****
-make -j8 all 
-Building file: ../src/lab04.s
-Invoking: MCU GCC Assembler
-/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Debug
-arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/Utilities" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/StdPeriph_Driver/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/inc" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/device" -I"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/CMSIS/core" -g -o "src/lab04.o" "../src/lab04.s"
-Finished building: ../src/lab04.s
- 
-Building target: Lab04_tejada.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/Documents/ECE362/Lab04_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab04_tejada.elf" @"objects.list" /home/shay/a/tejada/Documents/ECE362/Lab04_tejada/src/autotest.o  -lm
-Finished building target: Lab04_tejada.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Lab04_tejada.elf" "Lab04_tejada.bin"
-arm-none-eabi-size "Lab04_tejada.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1560	   1080	    204	   2844	    b1c	Lab04_tejada.elf
- 
+20:13:11 **** Incremental Build of configuration Debug for project Lab04_tejada ****
+make -j3 all 
+make: Nothing to be done for `all'.
 
-17:25:39 Build Finished (took 562ms)
+20:13:11 Build Finished (took 72ms)
 

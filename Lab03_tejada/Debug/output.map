@@ -2921,48 +2921,48 @@ Discarded input sections
  .text          0x0000000000000000       0x14 startup/startup_stm32f0xx.o
  .data          0x0000000000000000        0x0 startup/startup_stm32f0xx.o
  .bss           0x0000000000000000        0x0 startup/startup_stm32f0xx.o
- .text          0x0000000000000000        0x0 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
- .data          0x0000000000000000        0x0 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
- .bss           0x0000000000000000        0x0 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+ .text          0x0000000000000000        0x0 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
+ .data          0x0000000000000000        0x0 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
+ .bss           0x0000000000000000        0x0 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.nano_wait.constprop.2
-                0x0000000000000000       0x10 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x10 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_enable_ports
-                0x0000000000000000       0x14 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x14 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_port_c_output
-                0x0000000000000000       0x18 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x18 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_enablePC8
-                0x0000000000000000       0x20 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x20 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_enablePC9
-                0x0000000000000000       0x20 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x20 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_setpin
-                0x0000000000000000       0x10 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x10 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.disable_output
-                0x0000000000000000        0xc /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000        0xc /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_clrpin
-                0x0000000000000000        0xc /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000        0xc /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.internal_getpin
-                0x0000000000000000        0xc /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
- .text.blink    0x0000000000000000       0x24 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000        0xc /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
+ .text.blink    0x0000000000000000       0x24 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.check_enable_ports
-                0x0000000000000000       0x18 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x18 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.check_port_c_output
-                0x0000000000000000       0x1c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x1c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.check_setpin
-                0x0000000000000000       0x2c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x2c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.check_clrpin
-                0x0000000000000000       0x38 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x38 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.check_set_clrpin
-                0x0000000000000000       0x6c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x6c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.test_enable_ports
-                0x0000000000000000       0x58 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x58 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.test_port_c_output
-                0x0000000000000000       0x68 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x68 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.test_set_clrpin
-                0x0000000000000000       0x8c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x8c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.test_getpin
-                0x0000000000000000       0x90 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x90 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text.test_wiring
-                0x0000000000000000       0x5c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x0000000000000000       0x5c /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .text          0x0000000000000000      0x114 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
  .data          0x0000000000000000        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
  .bss           0x0000000000000000        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
@@ -3084,7 +3084,7 @@ LOAD src/main.o
 LOAD src/syscalls.o
 LOAD src/system_stm32f0xx.o
 LOAD startup/startup_stm32f0xx.o
-LOAD /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+LOAD /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
 LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libm.a
 START GROUP
 LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a
@@ -3162,7 +3162,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x0000000008000324                USART1_IRQHandler
                 0x0000000008000324                TIM1_CC_IRQHandler
  *fill*         0x0000000008000326        0x2 
- .text.run_seq  0x0000000008000328       0x70 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+ .text.run_seq  0x0000000008000328       0x70 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
                 0x0000000008000328                run_seq
  .text.__libc_init_array
                 0x0000000008000398       0x48 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc.a(lib_a-init.o)
@@ -3311,7 +3311,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
  .ARM.attributes
                 0x000000000000009c       0x21 startup/startup_stm32f0xx.o
  .ARM.attributes
-                0x00000000000000bd       0x31 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+                0x00000000000000bd       0x31 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
  .ARM.attributes
                 0x00000000000000ee       0x2c /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc.a(lib_a-impure.o)
  .ARM.attributes
@@ -3328,7 +3328,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x00000000000001f6       0x2c /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc.a(lib_a-__atexit.o)
  .ARM.attributes
                 0x0000000000000222       0x1e /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-OUTPUT(Lab03_Template.elf elf32-littlearm)
+OUTPUT(Lab03_tejada.elf elf32-littlearm)
 
 .debug_line     0x0000000000000000      0x820
  .debug_line    0x0000000000000000       0x98 src/main.o
@@ -3353,11 +3353,11 @@ OUTPUT(Lab03_Template.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000050       0x28 startup/startup_stm32f0xx.o
 
-.debug_str      0x0000000000000000    0x2bc1e
+.debug_str      0x0000000000000000    0x2bc8a
  .debug_str     0x0000000000000000       0x88 src/main.o
- .debug_str     0x0000000000000088    0x2bb77 src/system_stm32f0xx.o
+ .debug_str     0x0000000000000088    0x2bbe3 src/system_stm32f0xx.o
                                       0x2bd54 (size before relaxing)
- .debug_str     0x000000000002bbff       0x1f startup/startup_stm32f0xx.o
+ .debug_str     0x000000000002bc6b       0x1f startup/startup_stm32f0xx.o
                                          0x99 (size before relaxing)
 
 .debug_ranges   0x0000000000000000       0x40
@@ -3370,7 +3370,7 @@ OUTPUT(Lab03_Template.elf elf32-littlearm)
 .comment        0x0000000000000000       0x7f
  .comment       0x0000000000000000       0x7f src/system_stm32f0xx.o
                                          0x80 (size before relaxing)
- .comment       0x000000000000007f       0x80 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/Labs/Lab03_Template/src/autotest.o
+ .comment       0x000000000000007f       0x80 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab03_tejada/src/autotest.o
 
 .debug_frame    0x0000000000000000      0x22c
  .debug_frame   0x0000000000000000       0x6c src/system_stm32f0xx.o

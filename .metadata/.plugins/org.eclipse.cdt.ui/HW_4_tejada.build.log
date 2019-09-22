@@ -1,0 +1,23 @@
+07:22:14 **** Incremental Build of configuration Debug for project HW_4_tejada ****
+make -j3 all 
+Building file: ../src/hw4.s
+Invoking: MCU GCC Assembler
+/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/CMSIS/core" -g -o "src/hw4.o" "../src/hw4.s"
+Finished building: ../src/hw4.s
+ 
+Building target: HW_4_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HW_4_tejada.elf" @"objects.list"   -lm
+Finished building target: HW_4_tejada.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "HW_4_tejada.elf" "HW_4_tejada.bin"
+arm-none-eabi-size "HW_4_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+  36316	   2500	    256	  39072	   98a0	HW_4_tejada.elf
+ 
+
+07:22:14 Build Finished (took 326ms)
+
