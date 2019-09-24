@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="DAC" key="selection"/>
+		<item value="tick" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="tick"/>
 			<item value="DAC"/>
 			<item value="0xe000e000"/>
 			<item value=" enable the Timer 6 interrupt in the NVIC"/>

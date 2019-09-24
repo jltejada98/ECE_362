@@ -1,23 +1,6 @@
-10:37:24 **** Incremental Build of configuration Debug for project Lab05_tejada ****
+16:53:43 **** Incremental Build of configuration Debug for project Lab05_tejada ****
 make -j3 all 
-Building file: ../src/lab5.s
-Invoking: MCU GCC Assembler
-/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/Debug
-arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/CMSIS/core" -g -o "src/lab5.o" "../src/lab5.s"
-Finished building: ../src/lab5.s
- 
-Building target: Lab05_tejada.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab05_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab05_tejada.elf" @"objects.list" /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/ECE362/Lab05_tejada/src/autotest.o  -lm
-Finished building target: Lab05_tejada.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Lab05_tejada.elf" "Lab05_tejada.bin"
-arm-none-eabi-size "Lab05_tejada.elf"
-   text	   data	    bss	    dec	    hex	filename
-   2188	   1080	    196	   3464	    d88	Lab05_tejada.elf
- 
+make: Nothing to be done for `all'.
 
-10:37:24 Build Finished (took 224ms)
+16:53:43 Build Finished (took 70ms)
 

@@ -106,7 +106,7 @@ main:
 
 	//Set the PSC and ARR values for update 1ms
 	LDR R0, =TIM6
-	LDR R1, =2340
+	LDR R1, =2345
 	STR R1, [R0, #ARR] //Store ARR value
 	LDR R1, =3456
 	STR R1, [R0, #PSC] //Store PSC values

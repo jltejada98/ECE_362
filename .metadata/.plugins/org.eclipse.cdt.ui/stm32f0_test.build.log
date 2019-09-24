@@ -1,4 +1,4 @@
-10:32:28 **** Incremental Build of configuration Debug for project stm32f0_test ****
+13:49:05 **** Incremental Build of configuration Debug for project stm32f0_test ****
 make -j3 all 
 Building file: ../src/main.s
 Invoking: MCU GCC Assembler
@@ -19,5 +19,5 @@ arm-none-eabi-size "stm32f0_test.elf"
    1232	   1080	    196	   2508	    9cc	stm32f0_test.elf
  
 
-10:32:29 Build Finished (took 224ms)
+13:49:05 Build Finished (took 230ms)
 
