@@ -22,8 +22,8 @@ void testDebounce() {
 int main(void)
 {
 	//testTIM6();
-	//testInitGPIO();
-	testProb3();
+	testInitGPIO();
+	//testProb3();
 	testDebounce();
 	while(1);
 }

@@ -170,6 +170,9 @@ init_GPIO:
 .global TIM6_DAC_IRQHandler
 TIM6_DAC_IRQHandler:
 	PUSH {R4-R5, LR}
+
+	//START 6.3
+
 	//Acknowledge the interrupt
 	LDR R0, =TIM6
     LDR R1, [R0, #SR]
@@ -199,7 +202,9 @@ TIM6_DAC_IRQHandler:
 	STR R1, [R0] //Store tick to 0
 
 	endxx:
-	/*
+
+	//END 6.3
+
 	// Update the selected column.
 	LDR R0, =col
 	LDR R1, [R0] //Value of Col
@@ -221,22 +226,22 @@ TIM6_DAC_IRQHandler:
 	LDR R1, =history
 	LDRSB R4, [R1, R2] //Index
 	LSLS R4, #1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	ADDS R2, #1
 	LDRSB R4, [R1, R2] //Index + 1
 	LSLS R4, #1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	ADDS R2, #1
 	LDRSB R4, [R1, R2] //Index + 2
 	LSLS R4, #1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	ADDS R2, #1 //Increment index
 	LDRSB R4, [R1, R2] //Index + 3
 	LSLS R4, #1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	//
 	// Read the row indicators for the selected column.
@@ -255,29 +260,29 @@ TIM6_DAC_IRQHandler:
 	LDRSB R4, [R1, R2] //Index
 	ANDS R1, R5
 	ORRS R4, r1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	ADDS R2, #1
 	LDRSB R4, [R1, R2] //Index + 1
 	LSRS R1, #1
 	ANDS R1, R5
 	ORRS R4, r1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	ADDS R2, #1
 	LDRSB R4, [R1, R2] //Index + 2
 	LSRS R1, #2
 	ANDS R1, R5
 	ORRS R4, r1
-	STR R4, [R1, R2]
+	STRB R4, [R1, R2]
 
 	ADDS R2, #1
 	LDRSB R4, [R1, R2] //Index + 3
 	LSRS R1, #3
 	ANDS R1, R5
 	ORRS R4, r1
-	STR R4, [R1, R2]
-   */
+	STRB R4, [R1, R2]
+
   POP {R4-R5, PC}
 
 //=======================================================
