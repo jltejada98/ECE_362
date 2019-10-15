@@ -189,3 +189,6 @@ arm-none-eabi-size "Lab06_tejada.elf"
    text	   data	    bss	    dec	    hex	filename
    1108	   1080	    196	   2384	    950	Lab06_tejada.elf
  
+
+20:50:33 Build Finished (took 3s.245ms)
+
