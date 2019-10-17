@@ -1,6 +1,6 @@
-13:39:08 **** Incremental Build of configuration Debug for project HW_5_tejada ****
+15:01:40 **** Build of configuration Debug for project HW_5_tejada ****
 make -j3 all 
 make: Nothing to be done for `all'.
 
-13:39:08 Build Finished (took 96ms)
+15:01:40 Build Finished (took 76ms)
 
