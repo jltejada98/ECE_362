@@ -3670,3 +3670,6 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Lab06_tejada/
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2019-10-20 13:58:50.466
 !MESSAGE Cannot determine URI for '/Lab06_tejada/src/wave.c'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-20 14:03:07.653
+!MESSAGE Indexed 'Lab_7_tejada' (25 sources, 81 headers) in 0.624 sec: 5,557 declarations; 17,399 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)

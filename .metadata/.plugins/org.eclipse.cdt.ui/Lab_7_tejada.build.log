@@ -1,6 +1,3 @@
-14:03:22 **** Clean-only build of configuration Debug for project Lab_7_tejada ****
-make -j3 clean 
-make: *** No rule to make target `clean'.  Stop.
 14:03:22 **** Build of configuration Debug for project Lab_7_tejada ****
 make -j3 all 
 Building file: ../startup/startup_stm32f0xx.S
@@ -250,3 +247,6 @@ src/main.o: In function `main':
 /Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_7_tejada/Debug/../src/main.c:245: undefined reference to `test_wiring'
 collect2: error: ld returned 1 exit status
 make: *** [Lab_7_tejada.elf] Error 1
+
+14:03:24 Build Finished (took 2s.171ms)
+
