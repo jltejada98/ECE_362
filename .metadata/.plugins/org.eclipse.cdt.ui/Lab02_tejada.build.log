@@ -1,0 +1,7 @@
+13:57:13 **** Clean-only build of configuration Debug for project Lab02_tejada ****
+make -j3 clean 
+rm -rf *
+ 
+
+13:57:13 Build Finished (took 73ms)
+

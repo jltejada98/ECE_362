@@ -1,23 +1,7 @@
-16:22:26 **** Incremental Build of configuration Debug for project Lab06_tejada ****
-make -j3 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/Debug
-arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: Lab06_tejada.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab06_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab06_tejada.elf" @"objects.list"   -lm
-Finished building target: Lab06_tejada.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Lab06_tejada.elf" "Lab06_tejada.bin"
-arm-none-eabi-size "Lab06_tejada.elf"
-   text	   data	    bss	    dec	    hex	filename
-  17256	   1080	   2212	  20548	   5044	Lab06_tejada.elf
+13:57:14 **** Clean-only build of configuration Debug for project Lab06_tejada ****
+make -j3 clean 
+rm -rf *
  
 
-16:22:27 Build Finished (took 334ms)
+13:57:14 Build Finished (took 114ms)
 

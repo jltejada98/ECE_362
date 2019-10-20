@@ -1,14 +1,7 @@
-11:42:30 **** Build of configuration Debug for project HW_4_tejada ****
-make -j3 all 
-Building file: ../src/hw4.s
-Invoking: MCU GCC Assembler
-/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/Debug
-arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_4_tejada/CMSIS/core" -g -o "src/hw4.o" "../src/hw4.s"
-../src/hw4.s: Assembler messages:
-../src/hw4.s:284: Error: only D registers may be indexed -- `ldr R2 [R5,R6]'
-../src/hw4.s:286: Error: bad arguments to instruction -- `adds R6'
-../src/hw4.s:291: Error: symbol `endfor_2_s' is already defined
-make: *** [src/hw4.o] Error 1
+13:57:13 **** Clean-only build of configuration Debug for project HW_4_tejada ****
+make -j3 clean 
+rm -rf *
+ 
 
-11:42:30 Build Finished (took 122ms)
+13:57:13 Build Finished (took 125ms)
 

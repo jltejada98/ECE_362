@@ -29,13 +29,13 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Lab_1_tejada.elf
+all: Lab01_tejada.elf
 
 # Tool invocations
-Lab_1_tejada.elf: $(OBJS) $(USER_OBJS) /home/shay/a/tejada/workspace/Lab_1_tejada/LinkerScript.ld
+Lab01_tejada.elf: $(OBJS) $(USER_OBJS) /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/ECE362/Lab01_tejada/LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/home/shay/a/tejada/workspace/Lab_1_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab_1_tejada.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab01_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab01_tejada.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -47,8 +47,8 @@ clean:
 
 post-build:
 	-@echo 'Generating binary and Printing size information:'
-	arm-none-eabi-objcopy -O binary "Lab_1_tejada.elf" "Lab_1_tejada.bin"
-	arm-none-eabi-size "Lab_1_tejada.elf"
+	arm-none-eabi-objcopy -O binary "Lab01_tejada.elf" "Lab01_tejada.bin"
+	arm-none-eabi-size "Lab01_tejada.elf"
 	-@echo ' '
 
 .PHONY: all clean dependents

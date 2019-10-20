@@ -3375,7 +3375,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x000000000000022d       0x2c /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_muldi3.o)
  .ARM.attributes
                 0x0000000000000259       0x1e /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-OUTPUT(Lab_0_tejada.elf elf32-littlearm)
+OUTPUT(Lab00_tejada.elf elf32-littlearm)
 
 .debug_info     0x0000000000000000      0xc29
  .debug_info    0x0000000000000000      0x932 src/main.o

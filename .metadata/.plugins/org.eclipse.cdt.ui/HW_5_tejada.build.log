@@ -1,6 +1,7 @@
-15:01:40 **** Build of configuration Debug for project HW_5_tejada ****
-make -j3 all 
-make: Nothing to be done for `all'.
+13:57:13 **** Clean-only build of configuration Debug for project HW_5_tejada ****
+make -j3 clean 
+rm -rf *
+ 
 
-15:01:40 Build Finished (took 76ms)
+13:57:13 Build Finished (took 111ms)
 
