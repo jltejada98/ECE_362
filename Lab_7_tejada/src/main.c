@@ -119,7 +119,7 @@ void prob2() {
         }
 
         update_rgb(r, g, b);
-        usleep(1000);
+        usleep(10000);
     }
 }
 
@@ -148,6 +148,11 @@ void prob3(void)
 // pins corresponding to TIM1_CH1, TIM1_CH2 and TIM1_CH3 as alternate function.
 void setup_gpio() {
 	/* Student code goes here */
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER &= ~0x3f0000;
+	GPIOA->MODER |= 0x2A0000; //Alternate function code.
+	GPIOA->AFR[1] &= ~0xfff;
+	GPIOA->AFR[1] |= 0x222;
 }
 
 // Should use TIM1 to PSC so that the clock is 1 KHz, and choose the
@@ -158,6 +163,29 @@ void setup_gpio() {
 // a CCRx of 0 will result in maximum brightness.
 void setup_pwm() {
 	/* Student code goes here */
+	RCC->APB2ENR |= RCC_APB2ENR_TIM1EN; //Enable clock
+	TIM1->PSC = 480-1;
+	TIM1->ARR = 100-1;
+
+	//Channel 1
+	TIM1->CCR1 = 10;//Initial duty cycle
+	TIM1->CCMR1 |= TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1PE;
+	TIM1->CCER |= TIM_CCER_CC1E;
+
+	//Channel 2
+	TIM1->CCR2 = 10;
+	TIM1->CCMR1 |= TIM_CCMR1_OC2M_2 | TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2PE;
+	TIM1->CCER |= TIM_CCER_CC2E;
+
+	//Channel 3
+	TIM1->CCR3 = 10;
+	TIM1->CCMR2 |= TIM_CCMR2_OC3M_2 | TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3PE;
+	TIM1->CCER |= TIM_CCER_CC3E;
+
+	//Initialize for
+	TIM1->BDTR |= TIM_BDTR_MOE;
+	TIM1->CR1 |= TIM_CR1_CEN; //Enable timer.
+
 }
 
 
@@ -171,6 +199,7 @@ void setup_pwm() {
 // into TIM1_PSC given the frequency
 void update_freq(int freq) {
 	/* Student code goes here */
+	TIM1->PSC = (int)((48000000.0 / (100.0 * (float) freq)) - 1.0); //Should I perform checks on the frequency??
 }
 
 // This function accepts three arguments---the red, green, and blue values used
@@ -179,6 +208,15 @@ void update_freq(int freq) {
 // CCR registers. E.g. the red LED is connected to channel 1.
 void update_rgb(int r, int g, int b) {
 	/* Student code goes here */
+	//if((r>0) & (r<100)){
+		TIM1->CCR3 = 100-r;
+	//}
+	//if((g>0) & (g<100)){
+		TIM1->CCR2 = 100-g;
+	//}
+	//if((b>0) & (b<100)){
+		TIM1->CCR1 = 100-b;
+	//}
 }
 
 // -------------------------------------------
@@ -191,6 +229,12 @@ void update_rgb(int r, int g, int b) {
 // to determine the row of a button press).
 void init_keypad() {
 	/* Student code goes here */
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER &= ~(0xff);
+	GPIOA->MODER |= 0x55;
+	GPIOA->PUPDR &= ~(0xff00);
+	GPIOA->PUPDR |= 0xAA00;
+
 }
 
 // This function should,
@@ -199,23 +243,68 @@ void init_keypad() {
 // 1ms, enable the timer 6 interrupt, and start the timer.
 void setup_timer6() {
     /* Student code goes here */
-
+	RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;
+	//(48*10^6)/((479+1)*(99+1)) = 1,000 = 1/1ms
+	TIM6->PSC = 479;
+	TIM6->ARR = 99;
+	//Enable Interrupt
+	NVIC->ISER[0] |= (1<<TIM6_DAC_IRQn);
+	//Start timer
+	TIM6->DIER |= TIM_DIER_UIE;
+	TIM6->CR1 |= TIM_CR1_CEN;
 }
 
 // The functionality of this subroutine is described in the lab document
 int get_key_press() {
-	/* Student code goes here */
+	while(1) {
+		for(int i = 0; i < 16; i++) {
+		// Check if history[i] == 1
+		// if so return i
+	    if(history[i] == 1){
+	    	return i;
+	    }
+	  }
+	}
 }
 
 // The functionality of this subroutine is described in the lab document
 int get_key_release() {
 	/* Student code goes here */
+	while(1) {
+		for(int i = 0; i < 16; i++) {
+	    // Check if history[i] == -2
+	    // if so return i
+			if (history[i] == -2){
+				return i;
+			}
+		}
+	}
 }
 
 
 // See lab document for the instructions as to how to fill this
 void TIM6_DAC_IRQHandler() {
 	/* Student code goes here */
+	TIM6->SR &= ~TIM_SR_UIF; //Acknowledge TIM6 interrupt
+	int row = (GPIOA->IDR >> 4) & 0xf;
+	int index = col << 2;
+	history[index] <<= 1;
+	history[index] |= (row & 0x1);
+
+	history[index+1] <<= 1;
+	history[index+2] <<= 1;
+	history[index+3] <<= 1;
+
+	history[index+1] |= ((row>>1) & 0x1);
+	history[index+2] |= ((row>>2) & 0x1);
+	history[index+3] |= ((row>>3) & 0x1);
+
+	++col;
+
+	if (col > 3){
+		col = 0;
+	}
+	GPIOA->ODR = (1 << col);
 }
 
 // -------------------------------------------
@@ -225,25 +314,33 @@ void prob4(void)
 {
     init_lcd();
     init_keypad();
+    setup_gpio();
     setup_pwm();
     setup_timer6();
     display1(line1);
     display2(line2);
 
     while(1) {
-
     	char key = get_char_key();
         /* Student code goes here*/
+    	if(key == '*'){
+    		update_freq(get_user_freq());
+    	}
+    	else if (key == '#'){
 
+    		get_pwm_duty();
+    		update_rgb(red,grn,blue);
+    	}
         /* End of student code*/
+    	TIM1->PSC = (int)((48000000.0 / (100.0 * (float) 10)) - 1.0);
     }
 }
 
 
 int main(void)
 {
-    test_wiring();
+	//test_wiring();
     //prob2();
     //prob3();
-    //prob4();
+    prob4();
 }
