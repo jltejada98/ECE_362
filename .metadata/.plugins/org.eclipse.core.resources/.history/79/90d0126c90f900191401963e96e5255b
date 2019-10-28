@@ -13,9 +13,12 @@
 #include "stm32f0_discovery.h"
 			
 
-extern autotest(void);
+//extern autotest(void); Consider removing because no autotest.o file was given
+void setup_gpio();
 
-int  rdir=1,gdir=1,bdir=1;
+int  rdir=1;
+int gdir=1;
+int bdir=1;
 
 void tim1_init(void){
 	setup_gpio();
@@ -30,17 +33,17 @@ void tim1_init(void){
 
 	//Channel 1 (PWM = 6%) //Blue
 	//Duty Cycle PWM duty cycle = CCRx / (ARR + 1) = 120/2000
-	TIM1->CCR1 = 120;
+	TIM1->CCR1 = 0.06*2000;
 	TIM1->CCMR1 |= TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1PE;
 	TIM1->CCER |= TIM_CCER_CC1E;
 
 	//Channel 2 //Green
-	TIM1->CCR2 = 667;
+	TIM1->CCR2 = 33.33*2000;
 	TIM1->CCMR1 |= TIM_CCMR1_OC2M_2 | TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2PE;
 	TIM1->CCER |= TIM_CCER_CC2E;
 
 	//Channel 3 //Red
-	TIM1->CCR3 = 1333;
+	TIM1->CCR3 = 66.66*2000;
 	TIM1->CCMR2 |= TIM_CCMR2_OC3M_2 | TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3PE;
 	TIM1->CCER |= TIM_CCER_CC3E;
 
@@ -64,11 +67,13 @@ void setup_gpio() {
 void tim3_init(void){
 	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
 	TIM3->CR1 &= (~(TIM_CR1_DIR) | ~(TIM_CR1_CMS)); //Clear values and set to desired values
-	TIM3->PSC = 48000-1;
-	TIM3->ARR = 2-1;
+
+	//Timer 3
+	TIM3->PSC = 480-1;
+	TIM3->ARR = 200-1;
 
 	//Enable Interrupt
-	NVIC->ISER[0] |= (1<<TIM3_IRQn);
+	NVIC->ISER[0] |= (1<<TIM3_IRQn); //Dont know if it is correct
 	//Start timer
 	TIM3->DIER |= TIM_DIER_UIE;
 	TIM3->CR1 |= TIM_CR1_CEN;
@@ -76,8 +81,53 @@ void tim3_init(void){
 }
 
 
+void TIM3_IRQHandler(){
+	TIM3->SR &= ~TIM_SR_UIF;
+
+	if(rdir == 1){
+		TIM1->CCR3 = (TIM1->CCR3 * 517)>>9;
+		if(TIM1->CCR3 >= 1980){
+			rdir = -1;
+		}
+	}
+	else{
+		TIM1->CCR3 = (TIM1->CCR3 * 506)>>9;
+		if(TIM1->CCR3 <= 120){
+			rdir = 1;
+		}
+	}
+
+
+	if(gdir == 1){
+			TIM1->CCR2 = (TIM1->CCR2 * 517)>>9;
+			if(TIM1->CCR2 >= 1980){
+				gdir = -1;
+			}
+		}
+		else{
+			TIM1->CCR2 = (TIM1->CCR2 * 506)>>9;
+			if(TIM1->CCR2 <= 120){
+				gdir = 1;
+			}
+		}
+
+	if(bdir == 1){
+				TIM1->CCR1 = (TIM1->CCR1 * 517)>>9;
+				if(TIM1->CCR1 >= 1980){
+					bdir = -1;
+				}
+			}
+			else{
+				TIM1->CCR1 = (TIM1->CCR1 * 506)>>9;
+				if(TIM1->CCR1 <= 120){
+					bdir = 1;
+				}
+			}
+
+}
+
 int main(void) {
-	//autotest();
+	autotest();
 	tim1_init();
 	tim3_init();
 	while(1) asm("wfi");

@@ -33,17 +33,17 @@ void tim1_init(void){
 
 	//Channel 1 (PWM = 6%) //Blue
 	//Duty Cycle PWM duty cycle = CCRx / (ARR + 1) = 120/2000
-	TIM1->CCR1 = 120;
+	TIM1->CCR1 = 0.06*2000;
 	TIM1->CCMR1 |= TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1| TIM_CCMR1_OC1PE;
 	TIM1->CCER |= TIM_CCER_CC1E;
 
 	//Channel 2 //Green
-	TIM1->CCR2 = 667;
+	TIM1->CCR2 = 0.3333*2000;
 	TIM1->CCMR1 |= TIM_CCMR1_OC2M_2 | TIM_CCMR1_OC2M_1| TIM_CCMR1_OC2PE;
 	TIM1->CCER |= TIM_CCER_CC2E;
 
 	//Channel 3 //Red
-	TIM1->CCR3 = 1333;
+	TIM1->CCR3 = 0.6666*2000;
 	TIM1->CCMR2 |= TIM_CCMR2_OC3M_2 | TIM_CCMR2_OC3M_1| TIM_CCMR2_OC3PE;
 	TIM1->CCER |= TIM_CCER_CC3E;
 
@@ -127,7 +127,7 @@ void TIM3_IRQHandler(){
 }
 
 int main(void) {
-	//autotest();
+	autotest();
 	tim1_init();
 	tim3_init();
 	while(1) asm("wfi");

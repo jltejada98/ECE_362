@@ -1,6 +1,27 @@
-16:29:19 **** Incremental Build of configuration Debug for project HW_7_tejada ****
+10:37:11 **** Incremental Build of configuration Debug for project HW_7_tejada ****
 make -j3 all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:130:2: warning: implicit declaration of function 'autotest' [-Wimplicit-function-declaration]
+  autotest();
+  ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: HW_7_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_7_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HW_7_tejada.elf" @"objects.list" /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/ECE362/HW_7_tejada/src/autotest.o  -lm
+Finished building target: HW_7_tejada.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "HW_7_tejada.elf" "HW_7_tejada.bin"
+arm-none-eabi-size "HW_7_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+  36644	   2500	    256	  39400	   99e8	HW_7_tejada.elf
+ 
 
-16:29:19 Build Finished (took 75ms)
+10:37:11 Build Finished (took 334ms)
 
