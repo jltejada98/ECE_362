@@ -1,0 +1,6 @@
+17:11:24 **** Incremental Build of configuration Debug for project Lab_9_tejada ****
+make -j3 all 
+make: Nothing to be done for `all'.
+
+17:11:24 Build Finished (took 77ms)
+
