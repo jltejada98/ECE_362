@@ -1,0 +1,32 @@
+16:40:54 **** Incremental Build of configuration Debug for project Lab_10_tejada ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'putchar_irq':
+../src/main.c:249:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'action':
+../src/main.c:381:20: warning: implicit declaration of function 'atoi'; did you mean 'acos'? [-Wimplicit-function-declaration]
+          int val = atoi(words[1]);
+                    ^~~~
+                    acos
+Finished building: ../src/main.c
+ 
+Building target: Lab_10_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_10_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab_10_tejada.elf" @"objects.list" /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/ECE362/Lab_10_tejada/src/helper.o  -lm
+Finished building target: Lab_10_tejada.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab_10_tejada.elf" "Lab_10_tejada.bin"
+arm-none-eabi-size "Lab_10_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+  50216	   2500	   2528	  55244	   d7cc	Lab_10_tejada.elf
+ 
+
+16:40:55 Build Finished (took 384ms)
+

@@ -51,7 +51,7 @@
 							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.499016720" name="MCU GCC Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker">
 								<option id="gnu.c.link.option.userobjs.2099688804" name="Other objects" superClass="gnu.c.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/autotest.o}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/Lab_9_tejada/src/helper.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/helper.o}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1840404148" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
