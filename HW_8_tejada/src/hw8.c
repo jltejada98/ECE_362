@@ -50,6 +50,20 @@ int counter;
 //  - PC12 is an input, with a pull-down resistor
 // Do not change the configuration of any other pin on any other port.
 void problem1(void) {
+	RCC->AHBENR &= ~(RCC_AHBENR_GPIOCEN); //Clear bits
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN;
+
+	GPIOC->MODER &= ~(GPIO_MODER_MODER9 | GPIO_MODER_MODER10 | GPIO_MODER_MODER11 | GPIO_MODER_MODER12); //Clear Bits
+	GPIOC->MODER |= (GPIO_MODER_MODER9_0 |  GPIO_MODER_MODER10_0); //Configure 9,10 output (11,12 already configured input)
+
+	GPIOC->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR9 | GPIO_OSPEEDER_OSPEEDR10); //Clear bits
+	GPIOC->OSPEEDR |= (GPIO_OSPEEDER_OSPEEDR9_0 | GPIO_OSPEEDER_OSPEEDR10); //Set medium/high speeds
+
+	GPIOC->OTYPER &= ~(GPIO_OTYPER_OT_9 | GPIO_OTYPER_OT_10);
+	GPIOC->OTYPER |= GPIO_OTYPER_OT_10;
+
+	GPIOC->PUPDR &= (GPIO_PUPDR_PUPDR11 | GPIO_PUPDR_PUPDR12);
+	GPIOC->PUPDR |= (GPIO_PUPDR_PUPDR11_0 | GPIO_PUPDR_PUPDR12_1);
 
 }
 
@@ -58,9 +72,20 @@ void problem1(void) {
 //  - PC8 is an output, using high speed, push-pull drivers, using the
 //    alternate function that connects it to Timer 3, channel 3
 //  - PC9 is an output, using high speed, push-pull drivers, using the
-//    alternate function that connects it to Timer 4, channel 4
-void problem2(void) {
+//    alternate function that connects it to Timer 3, channel 4
+void problem2(void) { //Not Working
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN;
 
+	GPIOC->MODER &= ~((3<<2*9) | (3<<2*8));
+	GPIOC->MODER |= ((2<<2*9) | (2<<2*8)); //Set to outputs
+
+	GPIOC->OSPEEDR &= ~((3<<2*9) | (3<<2*8));
+	GPIOC->OSPEEDR |= (3<<2*9) | (3<<2*8); //Set to high speed
+
+	GPIOC->OTYPER &= ~((1<<9)|(3<<2*8)); //Set to default push pull drivers
+	GPIOC->OTYPER |= (0<<9) | (0<<8);
+//	GPIOC->AFR[1] &= ~(GPIO_AFRH_AFRH0 | GPIO_AFRH_AFRH1); //Clear Alternate Function Registers
+//	GPIOC->AFR[1] |= 1<<(4*1) | 1<<0; //Assumed AF1 for tim3
 }
 
 // Problem 3:
@@ -76,7 +101,26 @@ void problem2(void) {
 //  - Enable the timer.
 //  (Change no other configuration registers for any other functionality.)
 void problem3(void) {
+	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
 
+	TIM3->CR1 &= ~(TIM_CR1_CEN);
+
+	//Counter
+	TIM3->CR1 &= ~(TIM_CR1_CMS | TIM_CR1_DIR);
+	TIM3->ARR = 100-1;
+	TIM3->PSC = 1600-1;
+
+	//Channels 3 and 4 are set for PWM mode 1.
+	TIM3->CCMR2 &= ~(TIM_CCMR2_CC3S | TIM_CCMR2_OC3M | TIM_CCMR2_CC4S | TIM_CCMR2_OC4M);
+	TIM3->CCMR2 |= (TIM_CCMR2_OC3PE | (6<<4) | TIM_CCMR2_OC4PE | (6<<12));
+	//Outputs for channel 3 and 4 are enabled.
+	TIM3->CCER |= TIM_CCER_CC3E | TIM_CCER_CC4E;
+
+	TIM3->CCR3 = 12;//CCR3 register is set to 12.
+
+	TIM3->CCR4 = 84;//CCR4 register is set to 84.
+
+	TIM3->CR1 |= TIM_CR1_CEN;
 }
 
 // Problem 4:
@@ -92,6 +136,10 @@ void problem3(void) {
 // minimum value will be -32767.
 void problem4(void) {
 
+	for(int x = 0; x < sizeof(wavetable) / sizeof(wavetable[0]);x+= 1){
+		wavetable[x] = 32767 * sin(x * 2 * M_PI / 256);
+	}
+
 }
 
 // Problem 5:
@@ -102,6 +150,27 @@ void problem4(void) {
 //  - it is enabled.
 // You should be able to "listen to" the DAC by plugging in a speaker.
 void problem5(void) {
+	RCC->APB1ENR |= RCC_APB1ENR_DACEN; //Enable DAC
+	// Set the pin that corresponds with the DAC output as an output
+	// (it will automatically transmit the DACs output to this pin)
+	// (dont need to do any alternate function stuff)
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+
+	//Incorrect
+	GPIOA->MODER &= ~(GPIO_MODER_MODER4);
+	GPIOA->MODER |= GPIO_MODER_MODER4;
+
+
+	GPIOA->AFR[0] &= ~0xfff;
+	GPIOA->AFR[0] |= 0x222;
+
+	DAC->CR &= ~(DAC_CR_EN1);
+//	DAC->SWTRIGR |= DAC_SWTRIGR_SWTRIG1; //Software Trigger enable unecessary
+	DAC->CR &= ~(DAC_CR_TEN1);
+	DAC->CR |= DAC_CR_TEN1; //Trigger Enabled
+	DAC->CR &= ~(DAC_CR_TSEL1);
+	DAC->CR |= DAC_CR_TSEL1; //Select Software Trigger
+	DAC->CR |= DAC_CR_EN1; //Enable DAC
 
 }
 
@@ -117,7 +186,10 @@ void problem5(void) {
 //  - Write the converted result to DHR12R1.
 //  - Software trigger the DAC.
 void problem6(void) {
+	int val = (wavetable[offset] + 32768)>>4;
 
+	DAC->DHR12R1 = val;
+	DAC->SWTRIGR |= DAC_SWTRIGR_SWTRIG1; //Software Trigger enable
 }
 
 // Problem 7:
@@ -130,7 +202,15 @@ void problem6(void) {
 //  - Invoke problem6().
 //  - Increment the 'offset' variable.
 // Remember that you can find the names of ISRs in startup/startup_stm32f0xx.S.
+void TIM2_IRQHandler(){
+	TIM2->SR &= ~(TIM_SR_UIF);
+	if(offset >= sizeof(wavetable) / sizeof(wavetable[0])){
+		offset = 0;
+	}
+	problem6();
+	offset += 1;
 
+}
 
 // Problem 8:
 // Fill in the function below to initialize Timer 2 so that:
@@ -146,8 +226,17 @@ void problem6(void) {
 // If you run
 //    problem4(); problem5(); problem6(); problem8();
 // you should hear a 250 Hz sine wave on the DAC output.
-void problem8(void) {
+void problem8(void) { //Incorrect
+	RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+	TIM2->CR1 &= ~(TIM_CR1_CEN);
 
+	TIM2->PSC = 375-1;
+	TIM2->ARR = 1;
+
+	TIM2->DIER |= TIM_DIER_UIE;
+	TIM2->CR1 |= TIM_CR1_CEN;
+
+	NVIC->ISER[0] |= (1<<TIM2_IRQn);
 }
 
 // Problem 9:
@@ -161,6 +250,10 @@ void problem8(void) {
 // This should form a sinusoid with an amplitude of 2047 that is offset
 // by 2048.  Its maximum value will be 4095, and its minimum value will be 0.
 void problem9(void) {
+
+	for(int x=0; x < sizeof wavetable / sizeof wavetable[0]; x += 1){
+		wavetable[x] = (32767 * sin(x * 2 * M_PI / 256) + 32768) / 16;
+	}
 
 }
 
@@ -176,7 +269,20 @@ void problem9(void) {
 // You must determine which DMA channel to use!  (Which DMA channel
 // can be triggered by the Timer 15 update event?)
 void problem10(void) {
+	RCC->AHBENR |= RCC_AHBENR_DMA1EN;
 
+	DMA1_Channel5->CPAR = &(DAC->DHR12R1); //Consider Integer conversion.
+	DMA1_Channel5->CMAR = &(wavetable); //Consider Integer Conversion
+	DMA1_Channel5->CNDTR = 256;
+	DMA1_Channel5->CCR |= DMA_CCR_DIR; //Read from memory to peripheral
+	DMA1_Channel5->CCR |= DMA_CCR_MINC; //
+
+	DMA1_Channel5->CCR |= DMA_CCR_CIRC; //Circular transfers are enabled.
+	DMA1_Channel5->CCR &= ~(DMA_CCR_MSIZE);
+	DMA1_Channel5->CCR |= DMA_CCR_MSIZE_0; //Int16
+	DMA1_Channel5->CCR &= ~(DMA_CCR_PSIZE);
+	DMA1_Channel5->CCR |= DMA_CCR_PSIZE_0; //Assume its 16 bits truncates to 12, or 8 to fit in 12 ??
+	DMA1_Channel5->CCR |= DMA_CCR_EN;
 }
 
 // Problem 11:
@@ -197,6 +303,22 @@ void problem10(void) {
 //    problem5(); problem6(); problem9(); problem10(); problem11();
 // you should hear a 625 Hz tone on the DAC output.
 void problem11(void) {
+	RCC->APB2ENR |= RCC_APB2ENR_TIM15EN;
+
+	TIM15->CR1	&= ~(TIM_CR1_CEN);
+
+	TIM15->CR1 |= TIM_CR1_ARPE; //Set the auto-reload preload enable flag.
+	TIM15->CR2 &= ~(TIM_CR2_MMS);
+	TIM15->DIER |= TIM_DIER_UDE;
+	TIM15->CR2 |= TIM_CR2_MMS_1;
+	DAC->CR &= ~(DAC_CR_TSEL1);
+	DAC->CR |= DAC_CR_TSEL1_0 | DAC_CR_TSEL1_1;
+
+	TIM2->CR1 &= ~(TIM_CR1_CEN);
+
+	TIM15->ARR = 30-1;
+	TIM15->PSC =10-1;
+	TIM15->CR1 |= (TIM_CR1_CEN);
 
 }
 
@@ -216,6 +338,23 @@ void problem11(void) {
 // frequency, and then two cycles of the same sinusoid at twice the
 // frequency.
 
+void DMA1_Channel4_5_IRQHandler(){
+	DMA1->IFCR |= (DMA_IFCR_CGIF5);
+	counter += 1;
+	if(counter >=2){
+		counter = 0;
+		if(TIM15->ARR == (30-1)){
+						TIM15->CR1	&= ~(TIM_CR1_CEN);
+						TIM15->ARR = 15-1;
+						TIM15->CR1 |= (TIM_CR1_CEN);
+					}
+					else{
+						TIM15->CR1	&= ~(TIM_CR1_CEN);
+						TIM15->ARR = 30-1;
+						TIM15->CR1 |= (TIM_CR1_CEN);
+					}
+	}
+}
 
 // Problem13:
 // Fill in the function below to:
@@ -229,7 +368,8 @@ void problem11(void) {
 //   problem5(); problem6(); problem9(); problem10(); problem11(); problem13();
 // you should hear a strange tone and see shifting frequencies on a scope.
 void problem13(void) {
-
+	NVIC->ISER[0] |= 1 << ((DMA1_Channel4_5_IRQn) & 0x1F);
+	DMA1_Channel5->CCR |= (DMA_CCR_TCIE);
 }
 
 // Problem 14:
@@ -241,7 +381,10 @@ void problem13(void) {
 //  - wavetable[4] is 5
 //  - wavetable[5] is 95
 void problem14(void) {
-
+	for(int x=0;x<=4;x++){
+		wavetable[x] = 5;
+	}
+	wavetable[5] = 95;
 }
 
 // Problem 15:
@@ -255,7 +398,20 @@ void problem14(void) {
 //  - The DMA channel is triggered by the timer 3 channel 3 event.
 // You must determine which DMA channel to use!
 void problem15(void) {
+	RCC->AHBENR |= RCC_AHBENR_DMA1EN;
 
+	DMA1_Channel2->CCR &= ~(DMA_CCR_EN);
+	DMA1_Channel2->CPAR = &(TIM3->CCR3);
+	DMA1_Channel2->CMAR = &(wavetable);
+	DMA1_Channel2->CNDTR = 6;
+	DMA1_Channel2->CCR |= DMA_CCR_DIR; //Memory to peripheral
+	DMA1_Channel2->CCR &= ~(DMA_CCR_MSIZE);
+	DMA1_Channel2->CCR |= DMA_CCR_MSIZE_0; //Int16
+	DMA1_Channel2->CCR &= ~(DMA_CCR_PSIZE);
+	DMA1_Channel2->CCR |= DMA_CCR_PSIZE_0; //Int16
+	DMA1_Channel2->CCR |= DMA_CCR_CIRC;
+	DMA1_Channel2->CCR |= DMA_CCR_MINC;
+	DMA1_Channel2->CCR |= DMA_CCR_EN;
 }
 
 // Problem 16:
@@ -267,7 +423,9 @@ void problem15(void) {
 //     problem2(); problem3(); problem14(); problem15(); problem16();
 // You should see a distinctive variable duty-cycle square wave output on PC8.
 void problem16(void) {
-
+	TIM3->CR1 &= ~(TIM_CR1_CEN);
+	TIM3->DIER |= TIM_DIER_CC3DE;
+	TIM3->CR1 |= (TIM_CR1_CEN);
 }
 
 // Problem 17:
@@ -275,7 +433,19 @@ void problem16(void) {
 //  - It uses the high-speed internal clock.
 //  - It can read analog values from PC0.
 void problem17(void) {
-
+	RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;//enable the clock to ADC
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN;
+	GPIOA->MODER &= ~(GPIO_MODER_MODER0);
+	GPIOA->MODER |= (GPIO_MODER_MODER0);
+	RCC->CR2 |= RCC_CR2_HSI14ON; //Enable Hi-speed internal 14mhz clock
+	while(!(RCC->CR2 & RCC_CR2_HSI14RDY));
+		//Enable ADC
+	ADC1->CR |= ADC_CR_ADEN;
+		//Wait for ADC to be ready
+	while(!(ADC1->ISR & ADC_ISR_ADRDY));
+		//Wait for ADCstart to be ready
+	while((ADC1->CR & ADC_CR_ADSTART));
+	ADC1->CHSELR = 1<<10;
 }
 
 // Problem 18:
@@ -301,7 +471,26 @@ void problem17(void) {
 //    It turns out that this is necessary in order be able to set the SPE bit.
 //
 void problem18(void) {
+	RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
 
+	SPI1->CR1 &= ~(SPI_CR1_SPE);
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER &= ~(GPIO_MODER_MODER4 | GPIO_MODER_MODER5 | GPIO_MODER_MODER6| GPIO_MODER_MODER7);
+	GPIOA->MODER |= GPIO_MODER_MODER4_1 | GPIO_MODER_MODER5_1 | GPIO_MODER_MODER6_1 |GPIO_MODER_MODER7_1; //Incorrect Moder
+	GPIOA->AFR[0] &= ~(GPIO_AFRL_AFRL4 |GPIO_AFRL_AFRL5 | GPIO_AFRL_AFRL6| GPIO_AFRL_AFRL7); //Not set correctly
+
+	SPI1->CR1 &= ~(SPI_CR1_BR);
+	SPI1->CR1 |= SPI_CR1_BR_1;
+	SPI1->CR1 |= SPI_CR1_CPOL;
+	SPI1->CR1 |= SPI_CR1_CPHA;
+	SPI1->CR1 |= SPI_CR1_MSTR;
+	SPI1->CR1 |= SPI_CR1_SSM;
+	SPI1->CR1 &= ~(SPI_CR1_SSI);
+	SPI1->CR1 |= SPI_CR1_LSBFIRST;
+	SPI1->CR2 &= ~(SPI_CR2_DS);
+	SPI1->CR2 = SPI_CR2_DS_3; //Data size incorrect
+	SPI1->CR2 |= SPI_CR2_SSOE;
+	SPI1->CR1 |= (SPI_CR1_SPE);
 }
 
 // Problem 19:
@@ -317,6 +506,38 @@ void problem18(void) {
 //  - Auto end is enabled.
 //  - NACK is set.
 void problem19(void) {
+	RCC->AHBENR |=  RCC_AHBENR_GPIOBEN;
+	RCC->APB1ENR |= RCC_APB1ENR_I2C2EN;
+
+	RCC->CFGR3 &= ~(RCC_CFGR3_I2C1SW);
+
+	GPIOB->MODER &= ~(GPIO_MODER_MODER10 | GPIO_MODER_MODER11);
+	GPIOB->MODER |= (GPIO_MODER_MODER10_1 | GPIO_MODER_MODER11_1);
+
+	GPIOB->AFR[1] |= (1<<4*2) | (1<<4*3);
+
+	I2C2->CR1 &= ~(I2C_CR1_ANFOFF);
+	I2C2->CR1 &= ~(I2C_CR1_ERRIE | I2C_CR1_TCIE | I2C_CR1_STOPIE | I2C_CR1_NACKIE);
+	I2C2->CR1 |= I2C_CR1_NOSTRETCH;
+
+	I2C2->OAR1 &= ~I2C_OAR1_OA1EN;
+	I2C2->OAR2 &= ~I2C_OAR2_OA2EN;
+	I2C2->OAR1 = 0x2;
+
+	I2C2->CR2 &= ~I2C_CR2_ADD10;
+
+	I2C2->TIMINGR &= ~I2C_TIMINGR_PRESC;
+	I2C2->TIMINGR |= 0<<28;
+	I2C2->TIMINGR |= 3<<20;
+	I2C2->TIMINGR |= 1<<16;
+	I2C2->TIMINGR |= 3<<8;
+	I2C2->TIMINGR |= 9<<0;
+
+
+	I2C2->CR2 |= I2C_CR2_AUTOEND;
+	I2C2->CR2 |= I2C_CR2_NACK;
+
+	I2C2->CR1 |= I2C_CR1_PE;
 
 }
 
@@ -331,7 +552,21 @@ void problem19(void) {
 //  - It uses odd parity.
 //  - It is enabled.
 void problem20(void) {
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
 
+	GPIOA->MODER &=  ~(GPIO_MODER_MODER2 |GPIO_MODER_MODER3);
+	GPIOA->MODER |= GPIO_Mode_AF << (2*2)  | GPIO_Mode_AF<<(2*3);
+	GPIOA->AFR[0] &= ~(GPIO_AFRL_AFRL2 |GPIO_AFRL_AFRL3);
+	GPIOA->AFR[0] |= (GPIO_AF_1 << (4*2)  | GPIO_AF_1 << (4*3));
+
+	RCC->APB1ENR |= RCC_APB1ENR_USART2EN;
+	USART2->CR1 &= ~USART_CR1_UE;
+	USART2->CR1 &= ~(1<<12 | 1<<28| USART_CR1_OVER8);
+	USART2->CR1 |= USART_CR1_PS | USART_CR1_PCE;
+	USART2->CR2 &= ~USART_CR2_STOP;
+	USART2->BRR = 0x3E8;
+
+	USART2->CR1 |= USART_CR1_UE;
 }
 
 // Just look at all the things you learned how to do in this class.

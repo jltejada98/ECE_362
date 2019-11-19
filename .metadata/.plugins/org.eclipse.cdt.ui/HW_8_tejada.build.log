@@ -1,0 +1,37 @@
+22:14:48 **** Incremental Build of configuration Debug for project HW_8_tejada ****
+make -j3 all 
+Building file: ../src/hw8.c
+Invoking: MCU GCC Compiler
+/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/Utilities" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/StdPeriph_Driver/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/inc" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/CMSIS/device" -I"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/hw8.d" -MT"src/hw8.o" -o "src/hw8.o" "../src/hw8.c"
+../src/hw8.c: In function 'problem10':
+../src/hw8.c:274:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  DMA1_Channel5->CPAR = &(DAC->DHR12R1); //Consider Integer conversion.
+                      ^
+../src/hw8.c:275:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  DMA1_Channel5->CMAR = &(wavetable); //Consider Integer Conversion
+                      ^
+../src/hw8.c: In function 'problem15':
+../src/hw8.c:404:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  DMA1_Channel2->CPAR = &(TIM3->CCR3);
+                      ^
+../src/hw8.c:405:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  DMA1_Channel2->CMAR = &(wavetable);
+                      ^
+Finished building: ../src/hw8.c
+ 
+Building target: HW_8_tejada.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/joseluistejada/Documents/Purdue/Year 3/Semester 1/Computer Engineering 362/ECE362/HW_8_tejada/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HW_8_tejada.elf" @"objects.list" /Users/joseluistejada/Documents/Purdue/Year\ 3/Semester\ 1/Computer\ Engineering\ 362/ECE362/HW_8_tejada/src/autotest.o  -lm
+Finished building target: HW_8_tejada.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "HW_8_tejada.elf" "HW_8_tejada.bin"
+arm-none-eabi-size "HW_8_tejada.elf"
+   text	   data	    bss	    dec	    hex	filename
+  51028	   2492	    776	  54296	   d418	HW_8_tejada.elf
+ 
+
+22:14:48 Build Finished (took 347ms)
+

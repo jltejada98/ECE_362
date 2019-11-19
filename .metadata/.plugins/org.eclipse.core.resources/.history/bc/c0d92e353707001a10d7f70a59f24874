@@ -1,0 +1,166 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+
+
+#include "stm32f0xx.h"
+#include "stm32f0_discovery.h"
+
+#define INPUT_MODE 		0x0
+#define OUTPUT_MODE 	0x1
+#define ALT_FUNC_MODE 	0x2
+#define ANALOG_MODE 	0x3
+
+#define SYNC_LVL 0
+#define BLANK_LVL 0x110
+#define FULL_LVL 0x3BB
+
+#define PAINT_LINE TIME_uS 63.55
+#define NUM_ROWS 512
+#define NUM_COLS 128
+#define HORIZ_SYNC_SAMPLES 64
+#define VERT_SYNC_SAMPLES 50
+
+#define DAC_ADDR 00
+
+#define DMA_start DMA1_Channel3->CCR |= DMA_CCR_EN
+
+int row = 0;
+int field = 1;
+
+int arr1[NUM_COLS + HORIZ_SYNC_SAMPLES];
+int arr2[NUM_COLS + HORIZ_SYNC_SAMPLES];
+
+int vert_sync0[VERT_SYNC_SAMPLES];
+int vert_sync1[VERT_SYNC_SAMPLES];
+
+
+int* buffer;
+int* screen;
+
+int* dma_start;
+
+int renderBufferFlg;
+
+void swapBuffer()
+{
+	int* temp = buffer;
+	buffer = screen;
+	screen = temp;
+}
+
+
+void setup_gpio_a(int mode, int pin) {
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER |= mode << (pin * 2);
+}
+
+void dma_interrupt()
+{
+	row+=2;
+	if(row >= NUM_ROWS)	//Vertical sync stage
+	{
+		if(field == 1)
+		{
+			//TODO Setup DMA Ch2 for vertical sync0
+			row = -1;
+			field = 2;
+		}
+		else
+		{
+			//TODO Setup DMA Ch2 for vertical sync1
+			row = -2;
+			field = 1;
+		}
+
+		renderBufferFlg = 1;
+		return;
+	}
+	else
+	{
+		swapBuffer();
+
+		//Setup DMA for screen
+		DMA1_Channel1->CMAR = screen;
+		DMA_start;
+
+		renderBufferFlg = 1;
+	}
+
+}
+
+void renderBuffer()
+{
+	//Calculate values for the next row
+	//ie calculate the pixels to display for row+2
+}
+
+void setupHorizSync()
+{
+	for(int i = NUM_COLS; i < HORIZ_SYNC_SAMPLES; i++)
+	{
+		buffer[i] = 0;
+		//TODO Insert code that generates the vertical sync pulse here
+
+		screen[i] = buffer[i];
+	}
+}
+void setupDMA()
+{
+	RCC->AHBENR |= RCC_AHBENR_DMA1EN;
+	DMA1_Channel3->CCR &= ~DMA_CCR_EN;
+
+	DMA1_Channel3->CNDTR = NUM_COLS + HORIZ_SYNC_SAMPLES;
+	DMA1_Channel3->CCR |= DMA_CCR_DIR;		//Read from memory
+
+	DMA1_Channel3->CCR |= DMA_CCR_TCIE;		//Interrupt when done
+	DMA1_Channel3->CCR &= ~DMA_CCR_MSIZE;	//Don't interrupt when half done
+
+	DMA1_Channel3->CCR &= ~DMA_CCR_PSIZE;	// 00, 8 bits for perif
+	DMA1_Channel3->CCR &= ~DMA_CCR_MSIZE;	// clear size copied from mem
+	DMA1_Channel3->CCR |= 0x1 << 10;		// Set MSIZE to 01, 16 bits for int
+	DMA1_Channel3->CNDTR = NUM_COLS;        //Number of items set to number of columns.
+
+	DMA1_Channel3->CCR |= DMA_CCR_MINC;		//Increment memory location
+	DMA1_Channel3->CCR &= ~DMA_CCR_PINC;	//Do not increment perif location
+
+	DMA1_Channel3->CCR |= DMA_CCR_PL;		// Low priority?
+
+	NVIC->ISER[0] = 1<<DMA1_Channel2_3_IRQn;	//Enable interrupt
+
+	DMA1_Channel3->CMAR = screen;
+	DMA1_Channel3->CPAR = DAC_ADDR;
+
+	DMA1_Channel3->CCR |= DMA_CCR_EN;		//This line starts DMA
+}
+
+
+void sample_interrupt()
+{
+	//Sample ADC and store in sample array
+}
+
+int main(void)
+{
+	buffer = arr1;
+	screen = arr2;
+
+	setupHorizSync();
+	setupDMA();
+
+	while(1)
+	{
+		if(renderBufferFlg)
+		{
+			renderBufferFlg = 0;
+			renderBuffer();
+		}
+	}
+	return 1;
+}
